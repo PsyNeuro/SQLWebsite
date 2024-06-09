@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <script src="{{ url_for('static', filename='js/Storage.js') }}"></script>
+</head>
+<body>
+    <h1 align="center"> This is the home page, where you can buy our jeans</h1>
+
+{cart = []}
+
+<p>Ripped skinny Jeans</p>
+<img src="https://d1fufvy4xao6k9.cloudfront.net/images/landings/428/jeans_mob_3_1.jpg" height = "200" width = "200">
+<br>
+<button
+        type="button"
+        class="btn btn-primary" 
+        onclick="myFunction()">
+        BUY
+    </button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+          cart =+ "Ripped Skinny Jeans";
+        }
+        </script>
+
+<br>
+<p>Mega ripped Jeans</p>
+<img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1306412710a-1649788337.jpg?crop=0.670xw:1.00xh;0.215xw,0&resize=640:*" height = "200" width = "200">
+<br>
+<button
+        type="button"
+        class="btn btn-primary">
+        BUY
+    </button>
+<br>
+<p>Vintage skinny Jeans</p>
+<img src="https://image.uniqlo.com/UQ/ST3/eu/imagesgoods/464744/item/eugoods_64_464744.jpg" height = "200" width = "200">
+<br>
+<button
+        type="button"
+        class="btn btn-primary">
+        BUY
+    </button>
+
+<br><br>
+
+<a
+        href = "/cart"
+        class="btn btn-primary">
+        cart
+</a>
+
+</body>
+</html>
+
+{% endblock %}
